@@ -49,7 +49,7 @@ body {
     font-size: 1.25rem;
     background-color: #2b2d42;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 #msg{
@@ -58,13 +58,19 @@ body {
 }
 
 .msg-container{
-    height: 70vmin;
+    height: 100vmin;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 1.2rem;
 }
 
 .hide{
     display: none;
+}
+
+.MainContainer h1{
+    color:#52b69a;
+    margin-top: 27.5px;
 }
