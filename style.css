@@ -5,7 +5,6 @@
 
 body {
     background-color: #023047;
-    /* 219ebc */
     text-align: center;
 }
 
@@ -33,6 +32,39 @@ body {
     border-radius: 1rem;
     box-shadow: 0 0 0.5rem rgb(0,0,0.3);
     font-size: 8vmin;
-    color: #ffb703;
+    color: #ff6f00eb;
     background-color: #8ecae6;
+}
+
+#Reset{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #2b2d42;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#newbtn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #2b2d42;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#msg{
+    color: #ffffc7;
+    font-size: 5vmin;
+}
+
+.msg-container{
+    height: 70vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hide{
+    display: none;
 }
