@@ -44,6 +44,12 @@ body {
     border-radius: 5px;
 }
 
+#Reset-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #newbtn{
     padding: 1rem;
     font-size: 1.25rem;
@@ -73,4 +79,22 @@ body {
 .MainContainer h1{
     color:#52b69a;
     margin-top: 27.5px;
+}
+
+#gamescore  {
+    color: #45ffcae9;
+    font-size: 25px;
+    flex-direction: row;
+    gap: 1.2rem;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.resetscore{
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #35363e;
+    color: #fff;
+    border-radius: 10px;
 }
