@@ -4,6 +4,8 @@ let newGameBtn=document.querySelector("#newbtn");
 let msgConatiner=document.querySelector(".msg-container");
 let msg=document.querySelector("#msg");
 let mainContainer=document.querySelector(".MainContainer");
+let Score=document.querySelectorAll(".score");
+let restscore=document.querySelector(".resetscore");
 
 let turnO=true;  
 let count=0;  
@@ -18,6 +20,8 @@ const winPatterns=[
     [3, 4, 5],
     [6, 7, 8],
 ];
+
+const playersScores=[0,0];
 
 const resetGame=()=>{
     turnO=true;
@@ -55,22 +59,38 @@ const enabledBtn=()=>{
     for(box of boxes){
         box.disabled=false;
         box.innerText="";
-
     }
 };
 
-const showWinner=(Winner)=>{
-    msg.innerText=`Congratulations, Winner is Player ${Winner}`;
+const showWinner = (Winner) => {
+    msg.innerText = `Congratulations, Winner is Player ${Winner}`;
     msgConatiner.classList.remove("hide");
     mainContainer.classList.add("hide");
+
+    // Update the score
+    if (Winner === "X") {
+        playersScores[0]++; // Increment Player X's score
+        Score[0].innerText = `Player 1: ${playersScores[0]}`; 
+    } else {
+        playersScores[1]++; // Increment Player O's score
+        Score[1].innerText = `Player 2: ${playersScores[1]}`; 
+    }
 };
+
+restscore.addEventListener("click",()=>{
+    playersScores[0]=0;
+    playersScores[1]=0;
+    Score[0].innerText = `Player 1: ${playersScores[0]}`; 
+    Score[1].innerText = `Player 2: ${playersScores[1]}`; 
+    // resetGame();
+});
 
 const checkWinner=()=>{
     for(let patterns of winPatterns){
         let pos1val=boxes[patterns[0]].innerText;
         let pos2val=boxes[patterns[1]].innerText;
         let pos3val=boxes[patterns[2]].innerText;
-
+        
         if (pos1val !="" && pos2val !="" && pos3val!=""){
             if(pos1val===pos2val && pos2val===pos3val){
                 showWinner(pos1val);
