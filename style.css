@@ -8,6 +8,24 @@ body {
     text-align: center;
 }
 
+.nav{
+    /* border: solid black; */
+    height: 98vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Startgame{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #2b2d42;
+    color: #fff;
+    border-radius: 7px;
+    height: auto;
+}
+
 .container{
     height: 70vh;
     display: flex;
